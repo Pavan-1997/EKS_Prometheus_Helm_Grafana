@@ -206,9 +206,9 @@ Step 11 - Visualise the java application
 ----------------------------------------------------------------------------------------------------------------
 Step 12 - Deploy a Java application and monitor it on Grafana
 ----------------------------------------------------------------------------------------------------------------
-https://github.com/Pavan-1997/Java_Kubernetes_Deployment.git
+git clone https://github.com/Pavan-1997/Java_Kubernetes_Deployment.git
 
-cd /kubernetes_java_deployment/Kubernetes
+cd /Java_Kubernetes_Deployment/Kubernetes
 
 kubectl apply -f shopfront-service.yaml
 
