@@ -206,7 +206,7 @@ Step 11 - Visualise the java application
 ----------------------------------------------------------------------------------------------------------------
 Step 12 - Deploy a Java application and monitor it on Grafana
 ----------------------------------------------------------------------------------------------------------------
-https://github.com/praveen1994dec/kubernetes_java_deployment.git
+https://github.com/Pavan-1997/Java_Kubernetes_Deployment.git
 
 cd /kubernetes_java_deployment/Kubernetes
 
