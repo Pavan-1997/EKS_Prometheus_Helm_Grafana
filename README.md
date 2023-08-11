@@ -5,9 +5,8 @@ Setting up the Infra on AWS with EKS Kubernetes Cluster
 ![image](https://github.com/Pavan-1997/EKS_Prometheus_Helm_Grafana/assets/32020205/6268c034-9983-4db2-9b86-537dec9dbab4)
 
 ---
-## Step 1 
+## Step 1 - Setup EC2 Instance
 
-- Setup EC2 Instance
 - Instance Type as t2.medium
 - AMIs as Ubuntu
 
