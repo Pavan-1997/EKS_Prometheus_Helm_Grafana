@@ -202,7 +202,7 @@ kubectl get service -n grafana
 
 Password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
 
-### Step 10.6 - Import Grafana dashboard from Grafana Labs
+### Step 11.6 - Import Grafana dashboard from Grafana Labs
 
 For the custom Grafana Dashboard, we are going to use the open-source grafana dashboard. For this session, I am going to import a dashboard 6417
 
@@ -230,6 +230,7 @@ kubectl get pods
 kubectl logs shopfront-7868468c56-4r2kk -c shopfront
 ```
 
-Step 13 - Clean Up
-----------------------------------------------------------------------------------------------------------------
+Step 14 - Clean Up
+```
 eksctl delete cluster --name eks2 --region us-east-1
+```
