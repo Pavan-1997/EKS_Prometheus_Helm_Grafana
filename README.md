@@ -143,21 +143,21 @@ kubectl get pods -n prometheus
 kubectl port-forward deployment/prometheus-server 9090:9090 -n prometheus
 ```
  
-### Step 9.4 - Open different browser and connect to your EC2 instance and run the below command
+### Step 10.4 - Open different browser and connect to your EC2 instance and run the below command
 ```
 curl localhost:9090/graph
 ```
  
-## Step 10 - Install Grafana
+## Step 11 - Install Grafana
 ```
 helm repo add grafana https://grafana.github.io/helm-charts
 ```
 ```
 helm repo update
 ```
-----------------------------------------------------------------------------------------------------------------
-Step 10.1 - Now we need to create a Prometheus data source so that Grafana can access the Kubernetes metrics
-----------------------------------------------------------------------------------------------------------------
+
+### Step 11.1 - Now we need to create a Prometheus data source so that Grafana can access the Kubernetes metrics
+```
 #Create a yaml file prometheus-datasource.yaml and save the following data source configuration into it
 
 datasources:
@@ -168,7 +168,7 @@ datasources:
       type: prometheus
       url: http://prometheus-server.prometheus.svc.cluster.local
       access: proxy
-      isDefault: true                                                                                                                                                                                                                                                                                                                            
+      isDefault: true                                                                                                                                             ```                                                                                                                                                                               
                           
 ----------------------------------------------------------------------------------------------------------------
 Step 10.2 - Create a namespace Grafana
