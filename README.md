@@ -158,6 +158,7 @@ helm repo update
 
 ### Step 11.1 - Now we need to create a Prometheus data source so that Grafana can access the Kubernetes metrics
 ```
+
 #Create a yaml file prometheus-datasource.yaml and save the following data source configuration into it
 
 datasources:
@@ -171,8 +172,8 @@ datasources:
       isDefault: true                                                                                                                                             ```                                                                                                                                                                               
                           
 
-Step 10.2 - Create a namespace Grafana
-----------------------------------------------------------------------------------------------------------------
+### Step 11.2 - Create a namespace Grafana
+
 kubectl create namespace grafana
 
 ----------------------------------------------------------------------------------------------------------------
