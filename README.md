@@ -113,7 +113,7 @@ aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
 eksctl utils associate-iam-oidc-provider --cluster eks2 --approve --region us-east-1
 ```
 
-Step 10 - Create iamserviceaccount with role
+## Step 10 - Create iamserviceaccount with role
 ```
 eksctl create iamserviceaccount \
   --name ebs-csi-controller-sa \
@@ -126,15 +126,14 @@ eksctl create iamserviceaccount \
 --region us-east-1
 ```
 
-----------------------------------------------------------------------------------------------------------------
-Step 9.1 - Then attach ROLE to eks by running the following command
-----------------------------------------------------------------------------------------------------------------
-#Enter your account ID and cluster name.
+### Step 10.1 - Then attach ROLE to eks by running the following command
 
+- Enter your account ID and cluster name.
+```
 eksctl create addon --name aws-ebs-csi-driver --cluster eks2 --service-account-role-arn arn:aws:iam::716612577713:role/AmazonEKS_EBS_CSI_DriverRole --force --region us-east-1
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 9.2 - Verify pods in Prometheus
+Step 10.2 - Verify pods in Prometheus
 ----------------------------------------------------------------------------------------------------------------
 kubectl get pods -n prometheus
 
