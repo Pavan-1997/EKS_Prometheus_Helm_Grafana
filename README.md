@@ -133,27 +133,28 @@ eksctl create iamserviceaccount \
 eksctl create addon --name aws-ebs-csi-driver --cluster eks2 --service-account-role-arn arn:aws:iam::716612577713:role/AmazonEKS_EBS_CSI_DriverRole --force --region us-east-1
 ```
 
-Step 10.2 - Verify pods in Prometheus
-----------------------------------------------------------------------------------------------------------------
+### Step 10.2 - Verify pods in Prometheus
+```
 kubectl get pods -n prometheus
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 9.3 - View the Prometheus dashboard by forwarding the deployment ports
-----------------------------------------------------------------------------------------------------------------
+### Step 10.3 - View the Prometheus dashboard by forwarding the deployment ports
+```
 kubectl port-forward deployment/prometheus-server 9090:9090 -n prometheus
-
-----------------------------------------------------------------------------------------------------------------
-Step 9.4 - Open different browser and connect to your EC2 instance and run the below command
-----------------------------------------------------------------------------------------------------------------
+```
+ 
+### Step 9.4 - Open different browser and connect to your EC2 instance and run the below command
+```
 curl localhost:9090/graph
-
-----------------------------------------------------------------------------------------------------------------
-Step 10 - Install Grafana
-----------------------------------------------------------------------------------------------------------------
+```
+ 
+## Step 10 - Install Grafana
+```
 helm repo add grafana https://grafana.github.io/helm-charts
-
+```
+```
 helm repo update
-
+```
 ----------------------------------------------------------------------------------------------------------------
 Step 10.1 - Now we need to create a Prometheus data source so that Grafana can access the Kubernetes metrics
 ----------------------------------------------------------------------------------------------------------------
