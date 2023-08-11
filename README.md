@@ -80,7 +80,7 @@ kubectl get deployment metrics-server -n kube-system
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
 
-## Step 7.1 - Update helm chart repository
+## Step 8.1 - Update helm chart repository
 ```
 helm repo update
 ```
@@ -88,17 +88,17 @@ helm repo update
 helm repo list
 ```
 
-### Step 7.2 - Create prometheus namespace
+### Step 8.2 - Create prometheus namespace
 ```
 kubectl create namespace prometheus
 ```
 
-### Step 7.3 - Install Prometheus
+### Step 8.3 - Install Prometheus
 ```
 helm install prometheus prometheus-community/prometheus \--namespace prometheus \--set alertmanager.persistentVolume.storageClass="gp2" \--set server.persistentVolume.storageClass="gp2"
 ```
 
-## Step 8 - Create IAM OIDC Provider
+## Step 9 - Create IAM OIDC Provider
 
 - Your cluster has an OpenID Connect (OIDC) issuer URL associated with it. 
 
@@ -113,10 +113,8 @@ aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
 eksctl utils associate-iam-oidc-provider --cluster eks2 --approve --region us-east-1
 ```
 
-
-----------------------------------------------------------------------------------------------------------------
-Step 9 - Create iamserviceaccount with role
-----------------------------------------------------------------------------------------------------------------
+Step 10 - Create iamserviceaccount with role
+```
 eksctl create iamserviceaccount \
   --name ebs-csi-controller-sa \
   --namespace kube-system \
@@ -126,7 +124,7 @@ eksctl create iamserviceaccount \
   --role-only \
   --role-name AmazonEKS_EBS_CSI_DriverRole \
 --region us-east-1
-
+```
 
 ----------------------------------------------------------------------------------------------------------------
 Step 9.1 - Then attach ROLE to eks by running the following command
