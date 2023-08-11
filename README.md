@@ -36,7 +36,7 @@ sudo mv ./kubectl /usr/local/bin
 kubectl version
 ```
 
-Step 4 - Install and Setup eksctl
+## Step 4 - Install and Setup eksctl
 ```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp 
 
@@ -45,8 +45,8 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 ```
 
-Step 5 - Install Helm chart
-----------------------------------------------------------------------------------------------------------------
+## Step 5 - Install Helm chart
+```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 
 chmod 700 get_helm.sh
@@ -54,8 +54,8 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 
 helm version
+```
 
-----------------------------------------------------------------------------------------------------------------
 Step 5 - Creating an Amazon EKS cluster using eksctl
 ----------------------------------------------------------------------------------------------------------------
 eksctl create cluster --name eks2 --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.large --nodes 2 --nodes-min 2 --nodes-max 3
