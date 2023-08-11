@@ -56,11 +56,11 @@ chmod 700 get_helm.sh
 helm version
 ```
 
-Step 5 - Creating an Amazon EKS cluster using eksctl
-----------------------------------------------------------------------------------------------------------------
+## Step 6 - Creating an Amazon EKS cluster using eksctl
+```
 eksctl create cluster --name eks2 --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.large --nodes 2 --nodes-min 2 --nodes-max 3
+```
 
-----------------------------------------------------------------------------------------------------------------
 Step 6 - Installing the Kubernetes Metrics Server
 ----------------------------------------------------------------------------------------------------------------
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
