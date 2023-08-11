@@ -198,19 +198,17 @@ kubectl get pods -n grafana
 kubectl get service -n grafana
 ```
 
-Step 10.5 - Copy the EXTERNAL-IP and paste in browser
-----------------------------------------------------------------------------------------------------------------
-#Password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
+### Step 11.5 - Copy the EXTERNAL-IP and paste in browser
 
-----------------------------------------------------------------------------------------------------------------
-Step 10.6 - Import Grafana dashboard from Grafana Labs
-----------------------------------------------------------------------------------------------------------------
-#For the custom Grafana Dashboard, we are going to use the open source grafana dashboard. For this session, I am going to import a dashboard 6417
+Password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
 
-#Load and select the source as Prometheus
+### Step 10.6 - Import Grafana dashboard from Grafana Labs
 
-----------------------------------------------------------------------------------------------------------------
-Step 11 - Visualise the java application
+For the custom Grafana Dashboard, we are going to use the open source grafana dashboard. For this session, I am going to import a dashboard 6417
+
+Load and select the source as Prometheus
+
+## Step 12 - Visualise the java application
 
 ----------------------------------------------------------------------------------------------------------------
 Step 12 - Deploy a Java application and monitor it on Grafana
