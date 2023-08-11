@@ -66,12 +66,12 @@ eksctl create cluster --name eks2 --version 1.24 --region us-east-1 --nodegroup-
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
-### Step 6.1 - Verify that the metrics-server deployment is running the desired number of pods with the following command
+### Step 7.1 - Verify that the metrics-server deployment is running the desired number of pods with the following command
 ```
 kubectl get deployment metrics-server -n kube-system
 ```
 
-## Step 7 - Install Prometheus
+## Step 8 - Install Prometheus
 
 - Now install the Prometheus using the helm chart.
 
@@ -79,23 +79,24 @@ kubectl get deployment metrics-server -n kube-system
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
-----------------------------------------------------------------------------------------------------------------
-Step 7.1 - Update helm chart repository
-----------------------------------------------------------------------------------------------------------------
+
+## Step 7.1 - Update helm chart repository
+```
 helm repo update
-
+```
+```
 helm repo list
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 7.2 - Create prometheus namespace
-----------------------------------------------------------------------------------------------------------------
+### Step 7.2 - Create prometheus namespace
+```
 kubectl create namespace prometheus
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 7.3 - Install Prometheus
-----------------------------------------------------------------------------------------------------------------
+### Step 7.3 - Install Prometheus
+```
 helm install prometheus prometheus-community/prometheus \--namespace prometheus \--set alertmanager.persistentVolume.storageClass="gp2" \--set server.persistentVolume.storageClass="gp2"
-
+```
 ----------------------------------------------------------------------------------------------------------------
 Step 8 - Create IAM OIDC Provider
 ----------------------------------------------------------------------------------------------------------------
