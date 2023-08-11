@@ -229,7 +229,7 @@ kubectl get pods
 kubectl logs shopfront-7868468c56-4r2kk -c shopfront
 ```
 
-Step 14 - Clean Up
+## Step 14 - Clean Up
 ```
 eksctl delete cluster --name eks2 --region us-east-1
 ```
