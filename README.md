@@ -35,16 +35,16 @@ sudo mv ./kubectl /usr/local/bin
 
 kubectl version
 ```
-----------------------------------------------------------------------------------------------------------------
+
 Step 4 - Install and Setup eksctl
-----------------------------------------------------------------------------------------------------------------
+```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp 
 
 sudo mv /tmp/eksctl /usr/local/bin
 
 eksctl version
+```
 
-----------------------------------------------------------------------------------------------------------------
 Step 5 - Install Helm chart
 ----------------------------------------------------------------------------------------------------------------
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
