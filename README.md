@@ -169,16 +169,16 @@ datasources:
       type: prometheus
       url: http://prometheus-server.prometheus.svc.cluster.local
       access: proxy
-      isDefault: true                                                                                                                                             ```                                                                                                                                                                               
-                          
+      isDefault: true
 
+```                                                                                                                                                                               
 ### Step 11.2 - Create a namespace Grafana
-
+```
 kubectl create namespace grafana
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 10.3 - Install the Grafana
-----------------------------------------------------------------------------------------------------------------
+### Step 11.3 - Install the Grafana
+```
 #This below command will create the Grafana service with an external load balancer to get the public view
 
 helm install grafana grafana/grafana \
@@ -188,15 +188,16 @@ helm install grafana grafana/grafana \
   --set adminPassword='EKS!sAWSome' \
   --values prometheus-datasource.yaml \
   --set service.type=LoadBalancer
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 10.4 - Verify the Grafana installation by using the following kubectl command
-----------------------------------------------------------------------------------------------------------------
+### Step 11.4 - Verify the Grafana installation by using the following kubectl command
+```
 kubectl get pods -n grafana
-
+```
+```
 kubectl get service -n grafana
+```
 
-----------------------------------------------------------------------------------------------------------------
 Step 10.5 - Copy the EXTERNAL-IP and paste in browser
 ----------------------------------------------------------------------------------------------------------------
 #Password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
