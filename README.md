@@ -97,18 +97,21 @@ kubectl create namespace prometheus
 ```
 helm install prometheus prometheus-community/prometheus \--namespace prometheus \--set alertmanager.persistentVolume.storageClass="gp2" \--set server.persistentVolume.storageClass="gp2"
 ```
-----------------------------------------------------------------------------------------------------------------
-Step 8 - Create IAM OIDC Provider
-----------------------------------------------------------------------------------------------------------------
-#Your cluster has an OpenID Connect (OIDC) issuer URL associated with it. 
 
-#To use AWS Identity and Access Management (IAM) roles for service accounts, an IAM OIDC provider must exist for your cluster's OIDC issuer URL.
+## Step 8 - Create IAM OIDC Provider
 
+- Your cluster has an OpenID Connect (OIDC) issuer URL associated with it. 
+
+- To use AWS Identity and Access Management (IAM) roles for service accounts, an IAM OIDC provider must exist for your cluster's OIDC issuer URL.
+```
 oidc_id=$(aws eks describe-cluster --name eks2 --query "cluster.identity.oidc.issuer" --output text | cut -d '/' -f 5)
-
+```
+```
 aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
-
+```
+```
 eksctl utils associate-iam-oidc-provider --cluster eks2 --approve --region us-east-1
+```
 
 
 ----------------------------------------------------------------------------------------------------------------
