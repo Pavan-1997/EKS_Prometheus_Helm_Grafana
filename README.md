@@ -5,7 +5,7 @@ Setting up the Infra on AWS with EKS Kubernetes Cluster
 ![image](https://github.com/Pavan-1997/EKS_Prometheus_Helm_Grafana/assets/32020205/6268c034-9983-4db2-9b86-537dec9dbab4)
 
 ---
-Step 1 – Setup EC2 Instance
+## Step 1 – Setup EC2 Instance
   
   Instance Type as t2.medium
   
@@ -14,9 +14,8 @@ Step 1 – Setup EC2 Instance
 
 Step 1.1 – Attach the IAM role having full access
 
-----------------------------------------------------------------------------------------------------------------
-Step 2 - Install AWS CLI and Configure
-----------------------------------------------------------------------------------------------------------------
+## Step 2 - Install AWS CLI and Configure
+```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o"awscliv2.zip"
 
 sudo apt install unzip
@@ -24,7 +23,7 @@ sudo apt install unzip
 unzip awscliv2.zip
 
 sudo ./aws/install
-
+```
 ----------------------------------------------------------------------------------------------------------------
 Step 3 - Install and Setup Kubectl
 ----------------------------------------------------------------------------------------------------------------
