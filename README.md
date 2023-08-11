@@ -12,7 +12,7 @@ Setting up the Infra on AWS with EKS Kubernetes Cluster
   AMIs as Ubuntu
 
 
-Step 1.1 – Attach the IAM role having full access
+### Step 1.1 – Attach the IAM role having full access
 
 ## Step 2 - Install AWS CLI and Configure
 ```
