@@ -5,11 +5,11 @@ Setting up the Infra on AWS with EKS Kubernetes Cluster
 ![image](https://github.com/Pavan-1997/EKS_Prometheus_Helm_Grafana/assets/32020205/6268c034-9983-4db2-9b86-537dec9dbab4)
 
 ---
-## Step 1 – Setup EC2 Instance
-  
-  Instance Type as t2.medium
-  
-  AMIs as Ubuntu
+## Step 1 
+
+- Setup EC2 Instance
+- Instance Type as t2.medium
+- AMIs as Ubuntu
 
 
 ### Step 1.1 – Attach the IAM role having full access
@@ -198,9 +198,9 @@ kubectl get pods -n grafana
 kubectl get service -n grafana
 ```
 
-### Step 11.5 - Copy the EXTERNAL-IP and paste in browser
+### Step 11.5 - Copy the EXTERNAL-IP and paste in the browser
 
-Password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
+The password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
 
 ### Step 11.6 - Import Grafana dashboard from Grafana Labs
 
