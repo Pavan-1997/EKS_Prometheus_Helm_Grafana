@@ -61,24 +61,24 @@ helm version
 eksctl create cluster --name eks2 --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.large --nodes 2 --nodes-min 2 --nodes-max 3
 ```
 
-Step 6 - Installing the Kubernetes Metrics Server
-----------------------------------------------------------------------------------------------------------------
+## Step 7 - Installing the Kubernetes Metrics Server
+```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 6.1 - Verify that the metrics-server deployment is running the desired number of pods with the following command
-----------------------------------------------------------------------------------------------------------------
+### Step 6.1 - Verify that the metrics-server deployment is running the desired number of pods with the following command
+```
 kubectl get deployment metrics-server -n kube-system
+```
 
-----------------------------------------------------------------------------------------------------------------
-Step 7 - Install Prometheus
-----------------------------------------------------------------------------------------------------------------
-#Now install the Prometheus using the helm chart.
+## Step 7 - Install Prometheus
 
-#Add Prometheus helm chart repository
+- Now install the Prometheus using the helm chart.
 
+- Add Prometheus helm chart repository
+```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-
+```
 ----------------------------------------------------------------------------------------------------------------
 Step 7.1 - Update helm chart repository
 ----------------------------------------------------------------------------------------------------------------
