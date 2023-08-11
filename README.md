@@ -204,28 +204,32 @@ Password you mentioned as EKS!sAWSome while creating Grafana Step 10.3
 
 ### Step 10.6 - Import Grafana dashboard from Grafana Labs
 
-For the custom Grafana Dashboard, we are going to use the open source grafana dashboard. For this session, I am going to import a dashboard 6417
+For the custom Grafana Dashboard, we are going to use the open-source grafana dashboard. For this session, I am going to import a dashboard 6417
 
 Load and select the source as Prometheus
 
-## Step 12 - Visualise the java application
+## Step 12 - Visualise the Java application
 
-----------------------------------------------------------------------------------------------------------------
-Step 12 - Deploy a Java application and monitor it on Grafana
-----------------------------------------------------------------------------------------------------------------
+## Step 13 - Deploy a Java application and monitor it on Grafana
+```
 git clone https://github.com/Pavan-1997/Java_Kubernetes_Deployment.git
-
+```
+```
 cd /Java_Kubernetes_Deployment/Kubernetes
-
+```
+```
 kubectl apply -f shopfront-service.yaml
-
+```
+```
 kubectl get deployment
-
+```
+```
 kubectl get pods
-
+```
+```
 kubectl logs shopfront-7868468c56-4r2kk -c shopfront
+```
 
-----------------------------------------------------------------------------------------------------------------
 Step 13 - Clean Up
 ----------------------------------------------------------------------------------------------------------------
 eksctl delete cluster --name eks2 --region us-east-1
